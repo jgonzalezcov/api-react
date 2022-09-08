@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/api-react/static/css/main.d9639eda.css",
+    "main.js": "/api-react/static/js/main.2492906a.js",
+    "static/media/aura2.gif": "/api-react/static/media/aura2.24e65f62c2b28a2c2ad6.gif",
+    "static/media/fondo.png": "/api-react/static/media/fondo.e6bbfc5d302021daa3f3.png",
+    "static/media/escudo.jpg": "/api-react/static/media/escudo.5bce35caa40d1bfa1545.jpg",
+    "static/media/embudomarvel.png": "/api-react/static/media/embudomarvel.1d93548e702c98d145e0.png",
+    "static/media/marvel.png": "/api-react/static/media/marvel.275558ebb62a64a6b12c.png",
+    "index.html": "/api-react/index.html",
+    "main.d9639eda.css.map": "/api-react/static/css/main.d9639eda.css.map",
+    "main.2492906a.js.map": "/api-react/static/js/main.2492906a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9639eda.css",
+    "static/js/main.2492906a.js"
+  ]
+}

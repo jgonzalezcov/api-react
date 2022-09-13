@@ -5,7 +5,7 @@
 body {
   background-repeat: no-repeat;
   background: url(./assets/img/fondo.png) no-repeat center center fixed;
-  background-size: 70% auto;
+  background-size: 75% auto;
   background-color: #000;
   margin-bottom: 110px;
   background-color: #fff;
@@ -29,14 +29,20 @@ header {
 }
 .logo-header {
   width: 106px;
-  height: 7vh;
-  margin-left: calc(50% - 50px);
+  height: 75%;
+  margin-left: calc(50% - 53px);
 }
+.container-header-button {
+  width: 100px;
+  height: 5vh;
+  margin-right: 20px;
+}
+
 .header-button {
-  width: 183px;
+  width: 100px;
   height: 5vh;
   border-radius: 10px;
-  margin-right: 10px;
+
   border-color: #fff;
   color: #fefefe;
   background-color: #ee171f;
@@ -46,17 +52,72 @@ header {
 }
 .container-funnel {
   height: 5vh;
-  width: 200px;
+  width: 135px;
   display: flex;
-  color: #fefefe;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 25vw;
-  font-size: x-small;
+  margin-left: 20vw;
+
+  text-align: center;
 }
-.funnel {
+.text-funnel {
+  color: #3caf1a;
+  font-size: medium;
+}
+
+/*Order*/
+.order-container {
   height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #202020;
+  border: 1px solid#fefefe;
+  color: #fefefe;
+  cursor: pointer;
+  cursor: pointer;
+  margin-top: 10.2vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.activo-asce,
+.activo-desce {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  background-color: #2f78e3;
+  width: 4.5vw;
+  height: 2.6vh;
+  border-radius: 10px;
+  border: 1px solid #fefefe;
+}
+
+.desactivo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  background-color: #d4d4d4;
+  width: 4.5vw;
+  height: 2.6vh;
+  border-radius: 10px;
+  border: 1px solid #fefefe;
+  color: #2f78e3;
+}
+.button-order {
+  height: 2vh;
+  width: 2vh;
+}
+.text-filter {
+  margin-top: 1px;
+  font-size: 11px;
 }
 
 /*Letters*/
@@ -66,7 +127,6 @@ header {
   background-color: #202020;
   border: 1px solid#fefefe;
   color: #fefefe;
-  cursor: pointer;
   cursor: pointer;
   margin-top: 7.2vh;
   position: fixed;
@@ -84,25 +144,54 @@ header {
   justify-content: center;
   align-items: center;
 }
-
+.active-letter {
+  color: red;
+}
 /*Filtros*/
 .container-filter {
   background-image: url(./assets/img/escudo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
-  margin-top: 10.2vh;
-  height: 200px;
+  margin-top: 7.2vh;
+  height: 120px;
   width: 100%;
   position: fixed;
-  opacity: 0.9;
+  opacity: 0.93;
   left: 0;
   top: 0;
   z-index: 2;
   border: 1px solid #fefefe;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+}
+.checkbox-img {
+  color: #fefefe;
+}
+.title-filter {
+  margin-top: 5px;
+  color: #fefefe;
+}
+.container-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+.container-selections {
+  display: flex;
+  justify-content: space-around;
+  border: solid 0.5px #fefefe;
+  border-style: dotted;
+}
+.container-button-filter {
+  display: flex;
+  justify-content: center;
+}
+.button-acept-filter {
+  width: 15vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #fefefe;
 }
 
 /*Cards*/
@@ -121,18 +210,23 @@ header {
   width: 205px;
   height: 200px;
 }
+.img-card2 {
+  margin-top: 2px;
+  width: 105px;
+  height: 100px;
+  border: 5px solid transparent;
+  border-image: url(./assets/img/aura2.gif) 30 30 stretch;
+}
 .card {
   width: 210px;
   height: 300px;
-  background-color: #202020;
+
   margin: 10px;
   margin-top: 10px;
   color: #fff;
   text-align: center;
-  border: 5px solid transparent;
 
   opacity: 0.87;
-  border-image: url(./assets/img/aura2.gif) 30 30 stretch;
 }
 .name {
   margin-top: 5px;
@@ -142,6 +236,16 @@ header {
   text-shadow: 0 1px 0 #8b6e15, 0 2px 0 #7c6213, 0 3px 0 #6e5611,
     0 4px 0 #5f4b0e, 0 5px 0 #503f0c, 0 6px 0 #41330a,
     1.5px 4px 7.5px rgba(0, 0, 0, 0.1), 1.5px 4px 2.5px rgba(0, 0, 0, 0.3);
+}
+
+.name2 {
+  margin-top: 5px;
+  font: bold 10px/1 arial;
+  text-transform: uppercase;
+  color: #c69c1e;
+  text-shadow: 0 0.66px 0 #8b6e15, 0 1.33px 0 #7c6213, 0 2px 0 #6e5611,
+    0 2.5px 0 #5f4b0e, 0 3.2px 0 #503f0c, 0 4px 0 #41330a,
+    1px 2.66px 5px rgba(0, 0, 0, 0.1), 1px 2.5px 0.8px rgba(0, 0, 0, 0.3);
 }
 
 .num-comics {
@@ -154,4 +258,181 @@ header {
   margin-top: 1px;
   font-size: small;
   color: rgb(60, 175, 26);
+}
+
+.card-button {
+  margin-top: 5px;
+  width: 183px;
+  height: 3vh;
+  border-radius: 10px;
+  border-color: #fff;
+  color: #fefefe;
+  background-color: #2915e0;
+  font: 400 15px/1 'RobotoCondensed Bold', 'Trebuchet MS', Helvetica, Arial,
+    sans-serif;
+  font-weight: bold;
+}
+/*Giro Card*/
+.flip-container {
+  margin: 20px;
+  perspective: 1000;
+  display: inline-block;
+}
+.flip-container:hover .back {
+  transform: rotateY(180deg);
+}
+.flip-container:hover .front {
+  transform: rotateY(0deg);
+}
+.flip-container,
+.front,
+.back {
+  width: 210px;
+  height: 300px;
+}
+.card-efect {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 1s;
+  transform-style: preserve-3d;
+  border: 5px solid transparent;
+  border-image: url(./assets/img/aura2.gif) 30 30 stretch;
+}
+.front {
+  z-index: 1;
+  transform: rotateY(-180deg);
+  background: url('./assets/img/aura2.gif') no-repeat;
+}
+.back {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: #202020;
+}
+
+/*Comic Series Eventos*/
+.bg-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-card-others {
+  width: 150px;
+  height: 100%;
+  border: 3px solid #2f78e3;
+  border-radius: 5px;
+}
+
+.container-img-others {
+  width: 100%;
+  height: 185px;
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-others {
+  display: flex;
+  font: bold 15px/1 arial;
+  text-transform: uppercase;
+  color: #c69c1e;
+  text-shadow: 0 1px 0 #8b6e15, 0 2px 0 #7c6213, 0 3px 0 #6e5611,
+    0 4px 0 #5f4b0e, 0 5px 0 #503f0c, 0 6px 0 #41330a,
+    1.5px 4px 7.5px rgba(0, 0, 0, 0.1), 1.5px 4px 2.5px rgba(0, 0, 0, 0.3);
+  grid-area: title;
+}
+
+.description-others {
+  font: bold 15px/1 arial;
+  text-transform: uppercase;
+  color: #cccccc;
+  text-shadow: 0 1px 0 #818181, 0 2px 0 #7b7b7b, 0 3px 0 #696969,
+    0 4px 0 #595959, 0 5px 0 #505050, 0 6px 0 #3b3b3b,
+    1.5px 4px 7.5px rgba(0, 0, 0, 0.1), 1.5px 4px 2.5px rgba(0, 0, 0, 0.3);
+  grid-area: description;
+}
+.price-others-print {
+  color: #cbad27;
+  grid-area: print;
+}
+.link-others {
+  color: #18d618;
+  grid-area: url;
+  font-size: large;
+  text-decoration: underline;
+}
+.card-others {
+  margin-top: 10px;
+  width: 95%;
+  height: 220px;
+  border: 1px solid #fefefe;
+  background-image: url(./assets/img/comic2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  grid-template-rows: 10% 70% 5% 15%;
+  grid-template-areas:
+    'img title'
+    'img description'
+    'img print'
+    'img url';
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 4px solid #2f78e3;
+  border-radius: 20px;
+}
+.card-container-others {
+  position: absolute;
+  z-index: 1;
+  margin-top: 12vh;
+  background-color: #fefefe;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/*Menu Other*/
+.other-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202020;
+  border: 1px solid#fefefe;
+  color: #fefefe;
+  cursor: pointer;
+  margin-top: 7.2vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5vh;
+  z-index: 2;
+}
+.bt-header-other {
+  margin-right: 50px;
+  width: 183px;
+  height: 4vh;
+  border-radius: 10px;
+  border-color: #fff;
+  color: #fefefe;
+  background-color: #ee171f;
+  font: 400 15px/1 'RobotoCondensed Bold', 'Trebuchet MS', Helvetica, Arial,
+    sans-serif;
+  font-weight: bold;
+}
+.title-other {
+  text-align: center;
+  width: 400px;
+  height: 75%;
+  margin-left: calc(50% - 200px);
+  font: 400 30px/1 'RobotoCondensed Bold', 'Trebuchet MS', Helvetica, Arial;
 }

@@ -120,5 +120,9 @@ export const fighters = [
     id: 26,
     leter: 'Z',
   },
+  {
+    id: 27,
+    leter: '3',
+  },
 ]
 export default fighters

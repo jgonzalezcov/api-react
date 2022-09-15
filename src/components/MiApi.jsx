@@ -14,7 +14,6 @@ const MiApi = (props) => {
     const url = props.urlApi
     const response = await fetch(url)
     const data = await response.json()
-    // Guardar estado del orden para luego aca ordenar la respuesta de data antes de asignar a setInfoOri y setInfo
     props.setInfoOri(data.data.results)
     props.setInfo(data.data.results)
   }

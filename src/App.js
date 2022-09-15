@@ -38,13 +38,15 @@ function App() {
   useEffect(() => {
     OrderItems()
   }, [activeOrder])
-  /*******************************Sonidos*****************************/
-  const cartSound = new Audio(soundcard)
+
   /*******************************Funciones*****************************/
+
   /*Cambia el estado de la visualizacion del filtro al momento de hacer click en el boton "Filtros"*/
   const viewFilter = () => {
     setFilterView(true)
   }
+  /*******************************Sonidos*****************************/
+  const cartSound = new Audio(soundcard)
   /*Crea la Endpoint a consultar*/
   const functionLetters = (leter) => {
     setUrlApi(`${urls.start}${leter}${urls.end}`)
